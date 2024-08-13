@@ -1,0 +1,799 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F7287AB32C66765F00D7074D /* FengChiaFoodMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7287AB22C66765F00D7074D /* FengChiaFoodMapApp.swift */; };
+		F7287AB52C66765F00D7074D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7287AB42C66765F00D7074D /* ContentView.swift */; };
+		F7287AB72C66766000D7074D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7287AB62C66766000D7074D /* Assets.xcassets */; };
+		F7287ABA2C66766000D7074D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7287AB92C66766000D7074D /* Preview Assets.xcassets */; };
+		F7287AC12C66778100D7074D /* RestaurantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7287AC02C66778100D7074D /* RestaurantDetailView.swift */; };
+		F7287AC32C669F1D00D7074D /* RestaurantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7287AC22C669F1D00D7074D /* RestaurantListView.swift */; };
+		F7287AC52C67358B00D7074D /* RestaurantMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7287AC42C67358B00D7074D /* RestaurantMapView.swift */; };
+		F7287AC82C673FD500D7074D /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7287AC72C673FD500D7074D /* SignInView.swift */; };
+		F7287ACA2C67429500D7074D /* FengChiaFoodMapApp GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F7287AC92C67429500D7074D /* FengChiaFoodMapApp GoogleService-Info.plist */; };
+		F7287ACD2C67439800D7074D /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F7287ACC2C67439800D7074D /* FirebaseAnalytics */; };
+		F7287ACF2C67450700D7074D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F7287ACE2C67450700D7074D /* GoogleService-Info.plist */; };
+		F7287AD52C6749D900D7074D /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = F7287AD42C6749D900D7074D /* FirebaseAppCheck */; };
+		F7287AD72C6749D900D7074D /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = F7287AD62C6749D900D7074D /* FirebaseAppDistribution-Beta */; };
+		F7287AD92C6749D900D7074D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F7287AD82C6749D900D7074D /* FirebaseAuth */; };
+		F7287ADB2C6749D900D7074D /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = F7287ADA2C6749D900D7074D /* FirebaseDatabase */; };
+		F7287ADD2C6749D900D7074D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F7287ADC2C6749D900D7074D /* FirebaseFirestore */; };
+		F7287ADF2C6749D900D7074D /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = F7287ADE2C6749D900D7074D /* FirebaseRemoteConfig */; };
+		F7287AE12C6749D900D7074D /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F7287AE02C6749D900D7074D /* FirebaseStorage */; };
+		F7287AE32C676C0400D7074D /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7287AE22C676C0400D7074D /* Restaurant.swift */; };
+		F7287AE52C68EFD600D7074D /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = F7287AE42C68EFD600D7074D /* FirebaseAuthCombine-Community */; };
+		F7287AE72C68EFD600D7074D /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = F7287AE62C68EFD600D7074D /* FirebaseCrashlytics */; };
+		F7287AE92C68EFD600D7074D /* FirebaseDynamicLinks in Frameworks */ = {isa = PBXBuildFile; productRef = F7287AE82C68EFD600D7074D /* FirebaseDynamicLinks */; };
+		F7287AEB2C68EFD600D7074D /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = F7287AEA2C68EFD600D7074D /* FirebaseFirestoreCombine-Community */; };
+		F7287AED2C68EFD600D7074D /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = F7287AEC2C68EFD600D7074D /* FirebaseFunctions */; };
+		F7287AEF2C68EFD600D7074D /* FirebaseFunctionsCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = F7287AEE2C68EFD600D7074D /* FirebaseFunctionsCombine-Community */; };
+		F7287AF12C68EFD600D7074D /* FirebaseInAppMessaging-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = F7287AF02C68EFD600D7074D /* FirebaseInAppMessaging-Beta */; };
+		F7287AF32C68EFD600D7074D /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = F7287AF22C68EFD600D7074D /* FirebaseInstallations */; };
+		F7287AF52C68EFD600D7074D /* FirebaseMLModelDownloader in Frameworks */ = {isa = PBXBuildFile; productRef = F7287AF42C68EFD600D7074D /* FirebaseMLModelDownloader */; };
+		F7287AF72C68EFD600D7074D /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = F7287AF62C68EFD600D7074D /* FirebaseMessaging */; };
+		F7287AF92C68EFD600D7074D /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = F7287AF82C68EFD600D7074D /* FirebasePerformance */; };
+		F7287AFB2C68EFD600D7074D /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = F7287AFA2C68EFD600D7074D /* FirebaseStorageCombine-Community */; };
+		F7287AFD2C68F16C00D7074D /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = F7287AFC2C68F16C00D7074D /* FirebaseAnalyticsOnDeviceConversion */; };
+		F7287AFF2C68F16C00D7074D /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = F7287AFE2C68F16C00D7074D /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		F7287B012C68F16C00D7074D /* FirebaseVertexAI-Preview in Frameworks */ = {isa = PBXBuildFile; productRef = F7287B002C68F16C00D7074D /* FirebaseVertexAI-Preview */; };
+		F7287B032C68F2FC00D7074D /* RestaurantManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7287B022C68F2FC00D7074D /* RestaurantManagementView.swift */; };
+		F7287B052C69BFFB00D7074D /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7287B042C69BFFB00D7074D /* WebView.swift */; };
+		F7287B072C69C62800D7074D /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7287B062C69C62800D7074D /* SettingView.swift */; };
+		F7287B0A2C6B2D3F00D7074D /* RestaurantListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7287B092C6B2D3F00D7074D /* RestaurantListViewModel.swift */; };
+		F7287B0D2C6B2E1100D7074D /* SubmissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7287B0C2C6B2E1100D7074D /* SubmissionView.swift */; };
+		F7287B0F2C6B2E8200D7074D /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7287B0E2C6B2E8200D7074D /* AlertItem.swift */; };
+		F7287B122C6B2EBC00D7074D /* RestaurantFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7287B112C6B2EBC00D7074D /* RestaurantFormView.swift */; };
+		F7287B142C6B2F0700D7074D /* RestaurantFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7287B132C6B2F0700D7074D /* RestaurantFormViewModel.swift */; };
+		F7287B162C6B2F3800D7074D /* RestaurantManagementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7287B152C6B2F3800D7074D /* RestaurantManagementViewModel.swift */; };
+		F7287B1A2C6B2F9600D7074D /* RestaurantOpinionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7287B192C6B2F9600D7074D /* RestaurantOpinionView.swift */; };
+		F7287B1C2C6B2FB300D7074D /* RestaurantMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7287B1B2C6B2FB300D7074D /* RestaurantMenuView.swift */; };
+		F7287B1E2C6B2FEB00D7074D /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7287B1D2C6B2FEB00D7074D /* MenuItemView.swift */; };
+		F7287B212C6B303100D7074D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7287B202C6B303100D7074D /* SearchBar.swift */; };
+		F7287B252C6B314C00D7074D /* RestaurantAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7287B242C6B314C00D7074D /* RestaurantAnnotationView.swift */; };
+		F7287B272C6B316500D7074D /* CategoryFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7287B262C6B316500D7074D /* CategoryFilterView.swift */; };
+		F7287B292C6B319900D7074D /* RestaurantCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7287B282C6B319900D7074D /* RestaurantCardView.swift */; };
+		F7287B2B2C6B31DD00D7074D /* RestaurantMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7287B2A2C6B31DD00D7074D /* RestaurantMapViewModel.swift */; };
+		F7287B2D2C6B324200D7074D /* RestaurantDisplayRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7287B2C2C6B324200D7074D /* RestaurantDisplayRowView.swift */; };
+		F7287B2F2C6B387800D7074D /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7287B2E2C6B387800D7074D /* AuthViewModel.swift */; };
+		F7287B322C6B4A0C00D7074D /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7287B312C6B4A0C00D7074D /* SignUpView.swift */; };
+		F7287B342C6B4CFC00D7074D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7287B332C6B4CFC00D7074D /* CustomTextField.swift */; };
+		F7287B362C6B4D1500D7074D /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7287B352C6B4D1500D7074D /* CustomSecureField.swift */; };
+		F7287B382C6B4DD700D7074D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7287B372C6B4DD700D7074D /* ProfileView.swift */; };
+		F7287B3A2C6B4E8300D7074D /* UpdateContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7287B392C6B4E8300D7074D /* UpdateContentView.swift */; };
+		F7287B3C2C6B4EF700D7074D /* Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7287B3B2C6B4EF700D7074D /* Update.swift */; };
+		F7287B3F2C6B686C00D7074D /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = F7287B3E2C6B686C00D7074D /* GoogleMobileAds */; };
+		F7287B412C6B6AA600D7074D /* GoogleMobileAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7287B402C6B6AA600D7074D /* GoogleMobileAds.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F7287AAF2C66765F00D7074D /* FengChiaFoodMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FengChiaFoodMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7287AB22C66765F00D7074D /* FengChiaFoodMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FengChiaFoodMapApp.swift; sourceTree = "<group>"; };
+		F7287AB42C66765F00D7074D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F7287AB62C66766000D7074D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F7287AB92C66766000D7074D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F7287AC02C66778100D7074D /* RestaurantDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailView.swift; sourceTree = "<group>"; };
+		F7287AC22C669F1D00D7074D /* RestaurantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListView.swift; sourceTree = "<group>"; };
+		F7287AC42C67358B00D7074D /* RestaurantMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMapView.swift; sourceTree = "<group>"; };
+		F7287AC62C673F9E00D7074D /* FengChiaFoodMap.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FengChiaFoodMap.entitlements; sourceTree = "<group>"; };
+		F7287AC72C673FD500D7074D /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		F7287AC92C67429500D7074D /* FengChiaFoodMapApp GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "FengChiaFoodMapApp GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F7287ACE2C67450700D7074D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F7287AD02C67459600D7074D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7287AE22C676C0400D7074D /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		F7287B022C68F2FC00D7074D /* RestaurantManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantManagementView.swift; sourceTree = "<group>"; };
+		F7287B042C69BFFB00D7074D /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		F7287B062C69C62800D7074D /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		F7287B092C6B2D3F00D7074D /* RestaurantListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListViewModel.swift; sourceTree = "<group>"; };
+		F7287B0C2C6B2E1100D7074D /* SubmissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmissionView.swift; sourceTree = "<group>"; };
+		F7287B0E2C6B2E8200D7074D /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
+		F7287B112C6B2EBC00D7074D /* RestaurantFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantFormView.swift; sourceTree = "<group>"; };
+		F7287B132C6B2F0700D7074D /* RestaurantFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantFormViewModel.swift; sourceTree = "<group>"; };
+		F7287B152C6B2F3800D7074D /* RestaurantManagementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantManagementViewModel.swift; sourceTree = "<group>"; };
+		F7287B192C6B2F9600D7074D /* RestaurantOpinionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantOpinionView.swift; sourceTree = "<group>"; };
+		F7287B1B2C6B2FB300D7074D /* RestaurantMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMenuView.swift; sourceTree = "<group>"; };
+		F7287B1D2C6B2FEB00D7074D /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
+		F7287B202C6B303100D7074D /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		F7287B242C6B314C00D7074D /* RestaurantAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantAnnotationView.swift; sourceTree = "<group>"; };
+		F7287B262C6B316500D7074D /* CategoryFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFilterView.swift; sourceTree = "<group>"; };
+		F7287B282C6B319900D7074D /* RestaurantCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCardView.swift; sourceTree = "<group>"; };
+		F7287B2A2C6B31DD00D7074D /* RestaurantMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMapViewModel.swift; sourceTree = "<group>"; };
+		F7287B2C2C6B324200D7074D /* RestaurantDisplayRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDisplayRowView.swift; sourceTree = "<group>"; };
+		F7287B2E2C6B387800D7074D /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		F7287B312C6B4A0C00D7074D /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		F7287B332C6B4CFC00D7074D /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		F7287B352C6B4D1500D7074D /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
+		F7287B372C6B4DD700D7074D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		F7287B392C6B4E8300D7074D /* UpdateContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateContentView.swift; sourceTree = "<group>"; };
+		F7287B3B2C6B4EF700D7074D /* Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Update.swift; sourceTree = "<group>"; };
+		F7287B402C6B6AA600D7074D /* GoogleMobileAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMobileAds.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F7287AAC2C66765F00D7074D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7287AF72C68EFD600D7074D /* FirebaseMessaging in Frameworks */,
+				F7287AF52C68EFD600D7074D /* FirebaseMLModelDownloader in Frameworks */,
+				F7287AFB2C68EFD600D7074D /* FirebaseStorageCombine-Community in Frameworks */,
+				F7287ADB2C6749D900D7074D /* FirebaseDatabase in Frameworks */,
+				F7287AE92C68EFD600D7074D /* FirebaseDynamicLinks in Frameworks */,
+				F7287AE52C68EFD600D7074D /* FirebaseAuthCombine-Community in Frameworks */,
+				F7287AD52C6749D900D7074D /* FirebaseAppCheck in Frameworks */,
+				F7287ACD2C67439800D7074D /* FirebaseAnalytics in Frameworks */,
+				F7287ADF2C6749D900D7074D /* FirebaseRemoteConfig in Frameworks */,
+				F7287AD72C6749D900D7074D /* FirebaseAppDistribution-Beta in Frameworks */,
+				F7287AFD2C68F16C00D7074D /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				F7287AEF2C68EFD600D7074D /* FirebaseFunctionsCombine-Community in Frameworks */,
+				F7287B3F2C6B686C00D7074D /* GoogleMobileAds in Frameworks */,
+				F7287AE12C6749D900D7074D /* FirebaseStorage in Frameworks */,
+				F7287AE72C68EFD600D7074D /* FirebaseCrashlytics in Frameworks */,
+				F7287AED2C68EFD600D7074D /* FirebaseFunctions in Frameworks */,
+				F7287AFF2C68F16C00D7074D /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				F7287AF32C68EFD600D7074D /* FirebaseInstallations in Frameworks */,
+				F7287AF92C68EFD600D7074D /* FirebasePerformance in Frameworks */,
+				F7287AEB2C68EFD600D7074D /* FirebaseFirestoreCombine-Community in Frameworks */,
+				F7287AD92C6749D900D7074D /* FirebaseAuth in Frameworks */,
+				F7287ADD2C6749D900D7074D /* FirebaseFirestore in Frameworks */,
+				F7287B012C68F16C00D7074D /* FirebaseVertexAI-Preview in Frameworks */,
+				F7287AF12C68EFD600D7074D /* FirebaseInAppMessaging-Beta in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F7287AA62C66765F00D7074D = {
+			isa = PBXGroup;
+			children = (
+				F7287AB12C66765F00D7074D /* FengChiaFoodMap */,
+				F7287AB02C66765F00D7074D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F7287AB02C66765F00D7074D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7287AAF2C66765F00D7074D /* FengChiaFoodMap.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F7287AB12C66765F00D7074D /* FengChiaFoodMap */ = {
+			isa = PBXGroup;
+			children = (
+				F7287AC62C673F9E00D7074D /* FengChiaFoodMap.entitlements */,
+				F7287AB22C66765F00D7074D /* FengChiaFoodMapApp.swift */,
+				F7287AB42C66765F00D7074D /* ContentView.swift */,
+				F7287B402C6B6AA600D7074D /* GoogleMobileAds.swift */,
+				F7287B082C6B2CDB00D7074D /* Model */,
+				F7287AD12C6745CA00D7074D /* ViewModel */,
+				F7287B0B2C6B2DB600D7074D /* SettingsView */,
+				F7287B102C6B2EA300D7074D /* ManagementView */,
+				F7287B172C6B2F6400D7074D /* SignInUpView */,
+				F7287B182C6B2F8200D7074D /* DetailView */,
+				F7287B232C6B307900D7074D /* MapView */,
+				F7287B222C6B306E00D7074D /* ListView */,
+				F7287B1F2C6B301C00D7074D /* ToolView */,
+				F7287AB62C66766000D7074D /* Assets.xcassets */,
+				F7287ACE2C67450700D7074D /* GoogleService-Info.plist */,
+				F7287AC92C67429500D7074D /* FengChiaFoodMapApp GoogleService-Info.plist */,
+				F7287AD02C67459600D7074D /* Info.plist */,
+				F7287AB82C66766000D7074D /* Preview Content */,
+			);
+			path = FengChiaFoodMap;
+			sourceTree = "<group>";
+		};
+		F7287AB82C66766000D7074D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F7287AB92C66766000D7074D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F7287AD12C6745CA00D7074D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F7287B092C6B2D3F00D7074D /* RestaurantListViewModel.swift */,
+				F7287B132C6B2F0700D7074D /* RestaurantFormViewModel.swift */,
+				F7287B152C6B2F3800D7074D /* RestaurantManagementViewModel.swift */,
+				F7287B2A2C6B31DD00D7074D /* RestaurantMapViewModel.swift */,
+				F7287B2E2C6B387800D7074D /* AuthViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F7287B082C6B2CDB00D7074D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F7287AE22C676C0400D7074D /* Restaurant.swift */,
+				F7287B0E2C6B2E8200D7074D /* AlertItem.swift */,
+				F7287B3B2C6B4EF700D7074D /* Update.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F7287B0B2C6B2DB600D7074D /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				F7287B062C69C62800D7074D /* SettingView.swift */,
+				F7287B372C6B4DD700D7074D /* ProfileView.swift */,
+				F7287B0C2C6B2E1100D7074D /* SubmissionView.swift */,
+				F7287B392C6B4E8300D7074D /* UpdateContentView.swift */,
+			);
+			path = SettingsView;
+			sourceTree = "<group>";
+		};
+		F7287B102C6B2EA300D7074D /* ManagementView */ = {
+			isa = PBXGroup;
+			children = (
+				F7287B022C68F2FC00D7074D /* RestaurantManagementView.swift */,
+				F7287B112C6B2EBC00D7074D /* RestaurantFormView.swift */,
+			);
+			path = ManagementView;
+			sourceTree = "<group>";
+		};
+		F7287B172C6B2F6400D7074D /* SignInUpView */ = {
+			isa = PBXGroup;
+			children = (
+				F7287AC72C673FD500D7074D /* SignInView.swift */,
+				F7287B312C6B4A0C00D7074D /* SignUpView.swift */,
+			);
+			path = SignInUpView;
+			sourceTree = "<group>";
+		};
+		F7287B182C6B2F8200D7074D /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				F7287AC02C66778100D7074D /* RestaurantDetailView.swift */,
+				F7287B1D2C6B2FEB00D7074D /* MenuItemView.swift */,
+				F7287B192C6B2F9600D7074D /* RestaurantOpinionView.swift */,
+				F7287B1B2C6B2FB300D7074D /* RestaurantMenuView.swift */,
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
+		F7287B1F2C6B301C00D7074D /* ToolView */ = {
+			isa = PBXGroup;
+			children = (
+				F7287B042C69BFFB00D7074D /* WebView.swift */,
+				F7287B202C6B303100D7074D /* SearchBar.swift */,
+				F7287B332C6B4CFC00D7074D /* CustomTextField.swift */,
+				F7287B352C6B4D1500D7074D /* CustomSecureField.swift */,
+			);
+			path = ToolView;
+			sourceTree = "<group>";
+		};
+		F7287B222C6B306E00D7074D /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+				F7287AC22C669F1D00D7074D /* RestaurantListView.swift */,
+				F7287B2C2C6B324200D7074D /* RestaurantDisplayRowView.swift */,
+			);
+			path = ListView;
+			sourceTree = "<group>";
+		};
+		F7287B232C6B307900D7074D /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				F7287AC42C67358B00D7074D /* RestaurantMapView.swift */,
+				F7287B282C6B319900D7074D /* RestaurantCardView.swift */,
+				F7287B262C6B316500D7074D /* CategoryFilterView.swift */,
+				F7287B242C6B314C00D7074D /* RestaurantAnnotationView.swift */,
+			);
+			path = MapView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F7287AAE2C66765F00D7074D /* FengChiaFoodMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7287ABD2C66766000D7074D /* Build configuration list for PBXNativeTarget "FengChiaFoodMap" */;
+			buildPhases = (
+				F7287AAB2C66765F00D7074D /* Sources */,
+				F7287AAC2C66765F00D7074D /* Frameworks */,
+				F7287AAD2C66765F00D7074D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FengChiaFoodMap;
+			packageProductDependencies = (
+				F7287ACC2C67439800D7074D /* FirebaseAnalytics */,
+				F7287AD42C6749D900D7074D /* FirebaseAppCheck */,
+				F7287AD62C6749D900D7074D /* FirebaseAppDistribution-Beta */,
+				F7287AD82C6749D900D7074D /* FirebaseAuth */,
+				F7287ADA2C6749D900D7074D /* FirebaseDatabase */,
+				F7287ADC2C6749D900D7074D /* FirebaseFirestore */,
+				F7287ADE2C6749D900D7074D /* FirebaseRemoteConfig */,
+				F7287AE02C6749D900D7074D /* FirebaseStorage */,
+				F7287AE42C68EFD600D7074D /* FirebaseAuthCombine-Community */,
+				F7287AE62C68EFD600D7074D /* FirebaseCrashlytics */,
+				F7287AE82C68EFD600D7074D /* FirebaseDynamicLinks */,
+				F7287AEA2C68EFD600D7074D /* FirebaseFirestoreCombine-Community */,
+				F7287AEC2C68EFD600D7074D /* FirebaseFunctions */,
+				F7287AEE2C68EFD600D7074D /* FirebaseFunctionsCombine-Community */,
+				F7287AF02C68EFD600D7074D /* FirebaseInAppMessaging-Beta */,
+				F7287AF22C68EFD600D7074D /* FirebaseInstallations */,
+				F7287AF42C68EFD600D7074D /* FirebaseMLModelDownloader */,
+				F7287AF62C68EFD600D7074D /* FirebaseMessaging */,
+				F7287AF82C68EFD600D7074D /* FirebasePerformance */,
+				F7287AFA2C68EFD600D7074D /* FirebaseStorageCombine-Community */,
+				F7287AFC2C68F16C00D7074D /* FirebaseAnalyticsOnDeviceConversion */,
+				F7287AFE2C68F16C00D7074D /* FirebaseAnalyticsWithoutAdIdSupport */,
+				F7287B002C68F16C00D7074D /* FirebaseVertexAI-Preview */,
+				F7287B3E2C6B686C00D7074D /* GoogleMobileAds */,
+			);
+			productName = FengChiaFoodMap;
+			productReference = F7287AAF2C66765F00D7074D /* FengChiaFoodMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F7287AA72C66765F00D7074D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					F7287AAE2C66765F00D7074D = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = F7287AAA2C66765F00D7074D /* Build configuration list for PBXProject "FengChiaFoodMap" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F7287AA62C66765F00D7074D;
+			packageReferences = (
+				F7287ACB2C67434300D7074D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				F7287B3D2C6B686C00D7074D /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+			);
+			productRefGroup = F7287AB02C66765F00D7074D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F7287AAE2C66765F00D7074D /* FengChiaFoodMap */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F7287AAD2C66765F00D7074D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7287ABA2C66766000D7074D /* Preview Assets.xcassets in Resources */,
+				F7287ACF2C67450700D7074D /* GoogleService-Info.plist in Resources */,
+				F7287ACA2C67429500D7074D /* FengChiaFoodMapApp GoogleService-Info.plist in Resources */,
+				F7287AB72C66766000D7074D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F7287AAB2C66765F00D7074D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7287B342C6B4CFC00D7074D /* CustomTextField.swift in Sources */,
+				F7287B412C6B6AA600D7074D /* GoogleMobileAds.swift in Sources */,
+				F7287B162C6B2F3800D7074D /* RestaurantManagementViewModel.swift in Sources */,
+				F7287AC82C673FD500D7074D /* SignInView.swift in Sources */,
+				F7287B2B2C6B31DD00D7074D /* RestaurantMapViewModel.swift in Sources */,
+				F7287AB52C66765F00D7074D /* ContentView.swift in Sources */,
+				F7287B0D2C6B2E1100D7074D /* SubmissionView.swift in Sources */,
+				F7287B1A2C6B2F9600D7074D /* RestaurantOpinionView.swift in Sources */,
+				F7287B3A2C6B4E8300D7074D /* UpdateContentView.swift in Sources */,
+				F7287B0A2C6B2D3F00D7074D /* RestaurantListViewModel.swift in Sources */,
+				F7287B1C2C6B2FB300D7074D /* RestaurantMenuView.swift in Sources */,
+				F7287B3C2C6B4EF700D7074D /* Update.swift in Sources */,
+				F7287B032C68F2FC00D7074D /* RestaurantManagementView.swift in Sources */,
+				F7287B252C6B314C00D7074D /* RestaurantAnnotationView.swift in Sources */,
+				F7287AB32C66765F00D7074D /* FengChiaFoodMapApp.swift in Sources */,
+				F7287B272C6B316500D7074D /* CategoryFilterView.swift in Sources */,
+				F7287B142C6B2F0700D7074D /* RestaurantFormViewModel.swift in Sources */,
+				F7287AE32C676C0400D7074D /* Restaurant.swift in Sources */,
+				F7287B122C6B2EBC00D7074D /* RestaurantFormView.swift in Sources */,
+				F7287B072C69C62800D7074D /* SettingView.swift in Sources */,
+				F7287B362C6B4D1500D7074D /* CustomSecureField.swift in Sources */,
+				F7287B322C6B4A0C00D7074D /* SignUpView.swift in Sources */,
+				F7287AC12C66778100D7074D /* RestaurantDetailView.swift in Sources */,
+				F7287B052C69BFFB00D7074D /* WebView.swift in Sources */,
+				F7287AC52C67358B00D7074D /* RestaurantMapView.swift in Sources */,
+				F7287B382C6B4DD700D7074D /* ProfileView.swift in Sources */,
+				F7287B292C6B319900D7074D /* RestaurantCardView.swift in Sources */,
+				F7287B0F2C6B2E8200D7074D /* AlertItem.swift in Sources */,
+				F7287B2D2C6B324200D7074D /* RestaurantDisplayRowView.swift in Sources */,
+				F7287B212C6B303100D7074D /* SearchBar.swift in Sources */,
+				F7287B1E2C6B2FEB00D7074D /* MenuItemView.swift in Sources */,
+				F7287B2F2C6B387800D7074D /* AuthViewModel.swift in Sources */,
+				F7287AC32C669F1D00D7074D /* RestaurantListView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F7287ABB2C66766000D7074D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F7287ABC2C66766000D7074D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F7287ABE2C66766000D7074D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FengChiaFoodMap/FengChiaFoodMap.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FengChiaFoodMap/Preview Content\"";
+				DEVELOPMENT_TEAM = 3WMZ8937S4;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FengChiaFoodMap/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "逢甲美食地圖";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Ruxiu0409.FengChiaFoodMap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		F7287ABF2C66766000D7074D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FengChiaFoodMap/FengChiaFoodMap.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FengChiaFoodMap/Preview Content\"";
+				DEVELOPMENT_TEAM = 3WMZ8937S4;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FengChiaFoodMap/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "逢甲美食地圖";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Ruxiu0409.FengChiaFoodMap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F7287AAA2C66765F00D7074D /* Build configuration list for PBXProject "FengChiaFoodMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7287ABB2C66766000D7074D /* Debug */,
+				F7287ABC2C66766000D7074D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7287ABD2C66766000D7074D /* Build configuration list for PBXNativeTarget "FengChiaFoodMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7287ABE2C66766000D7074D /* Debug */,
+				F7287ABF2C66766000D7074D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F7287ACB2C67434300D7074D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.0.0;
+			};
+		};
+		F7287B3D2C6B686C00D7074D /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F7287ACC2C67439800D7074D /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F7287ACB2C67434300D7074D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		F7287AD42C6749D900D7074D /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F7287ACB2C67434300D7074D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		F7287AD62C6749D900D7074D /* FirebaseAppDistribution-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F7287ACB2C67434300D7074D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAppDistribution-Beta";
+		};
+		F7287AD82C6749D900D7074D /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F7287ACB2C67434300D7074D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		F7287ADA2C6749D900D7074D /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F7287ACB2C67434300D7074D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		F7287ADC2C6749D900D7074D /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F7287ACB2C67434300D7074D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		F7287ADE2C6749D900D7074D /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F7287ACB2C67434300D7074D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		F7287AE02C6749D900D7074D /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F7287ACB2C67434300D7074D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		F7287AE42C68EFD600D7074D /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F7287ACB2C67434300D7074D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		F7287AE62C68EFD600D7074D /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F7287ACB2C67434300D7074D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		F7287AE82C68EFD600D7074D /* FirebaseDynamicLinks */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F7287ACB2C67434300D7074D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDynamicLinks;
+		};
+		F7287AEA2C68EFD600D7074D /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F7287ACB2C67434300D7074D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		F7287AEC2C68EFD600D7074D /* FirebaseFunctions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F7287ACB2C67434300D7074D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFunctions;
+		};
+		F7287AEE2C68EFD600D7074D /* FirebaseFunctionsCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F7287ACB2C67434300D7074D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFunctionsCombine-Community";
+		};
+		F7287AF02C68EFD600D7074D /* FirebaseInAppMessaging-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F7287ACB2C67434300D7074D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseInAppMessaging-Beta";
+		};
+		F7287AF22C68EFD600D7074D /* FirebaseInstallations */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F7287ACB2C67434300D7074D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseInstallations;
+		};
+		F7287AF42C68EFD600D7074D /* FirebaseMLModelDownloader */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F7287ACB2C67434300D7074D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMLModelDownloader;
+		};
+		F7287AF62C68EFD600D7074D /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F7287ACB2C67434300D7074D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		F7287AF82C68EFD600D7074D /* FirebasePerformance */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F7287ACB2C67434300D7074D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebasePerformance;
+		};
+		F7287AFA2C68EFD600D7074D /* FirebaseStorageCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F7287ACB2C67434300D7074D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageCombine-Community";
+		};
+		F7287AFC2C68F16C00D7074D /* FirebaseAnalyticsOnDeviceConversion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F7287ACB2C67434300D7074D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsOnDeviceConversion;
+		};
+		F7287AFE2C68F16C00D7074D /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F7287ACB2C67434300D7074D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		F7287B002C68F16C00D7074D /* FirebaseVertexAI-Preview */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F7287ACB2C67434300D7074D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseVertexAI-Preview";
+		};
+		F7287B3E2C6B686C00D7074D /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F7287B3D2C6B686C00D7074D /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = F7287AA72C66765F00D7074D /* Project object */;
+}
