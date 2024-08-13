@@ -52,15 +52,21 @@ struct RestaurantDetailView: View {
                     
                     if restaurantOpeningHoursButton {
                         VStack(alignment: .leading, spacing: 4) {
-                            ForEach(restaurant.openingHours) { openingHour in
-                                HStack {
-                                    Text(openingHour.day)
-                                        .foregroundColor(.gray)
-                                        .font(.system(size: 14, weight: .bold))
-                                    Spacer()
-                                    Text(formatTimeRange(openTime: openingHour.openTime, closeTime: openingHour.closeTime))
-                                        .foregroundColor(.gray)
-                                        .font(.system(size: 14, weight: .regular))
+                            HStack{
+                                VStack(alignment: .leading){
+                                    ForEach(restaurant.openingHours) { openingHour in
+                                        Text(openingHour.day)
+                                            .foregroundColor(.gray)
+                                            .font(.system(size: 14, weight: .bold))
+                                    }
+                                }
+                                Spacer()
+                                VStack(alignment: .leading){
+                                    ForEach(restaurant.openingHours) { openingHour in
+                                        Text(formatTimeRange(openTime: openingHour.openTime, closeTime: openingHour.closeTime))
+                                            .foregroundColor(.gray)
+                                            .font(.system(size: 14, weight: .regular))
+                                    }
                                 }
                             }
                         }
