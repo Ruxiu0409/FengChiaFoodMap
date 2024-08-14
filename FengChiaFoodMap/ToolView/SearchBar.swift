@@ -30,7 +30,6 @@ struct SearchBar: View {
                             }) {
                                 Image(systemName: "multiply.circle.fill")
                                     .foregroundColor(.gray)
-                                    .padding(.trailing, 8)
                             }
                             //.contentShape(Rectangle()) // 擴大點擊區域
                             //.padding(10) // 增加額外的點擊範圍

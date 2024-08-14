@@ -130,7 +130,7 @@ struct RestaurantDetailView: View {
                         VStack {
                             Text("評價")
                                 .foregroundStyle(currentPage == 0 ? .black : .gray)
-                                .font(.system(size: currentPage == 0 ? 16 : 12))
+                                //.font(.system(size: currentPage == 0 ? 16 : 12))
                             Rectangle()
                                 .frame(height: 4)
                                 .foregroundStyle(currentPage == 0 ? .black : .clear)
@@ -145,7 +145,7 @@ struct RestaurantDetailView: View {
                         VStack {
                             Text("菜單")
                                 .foregroundStyle(currentPage == 1 ? .black : .gray)
-                                .font(.system(size: currentPage == 1 ? 16 : 12))
+                                //.font(.system(size: currentPage == 1 ? 16 : 12))
                             Rectangle()
                                 .frame(height: 4)
                                 .foregroundStyle(currentPage == 1 ? .black : .clear)
