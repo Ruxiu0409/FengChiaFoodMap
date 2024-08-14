@@ -2,7 +2,7 @@ import SwiftUI
 import FirebaseAuth
 
 struct SettingView: View {
-    @ObservedObject var viewModel: AuthViewModel
+    @ObservedObject var viewModel = AuthViewModel()
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {

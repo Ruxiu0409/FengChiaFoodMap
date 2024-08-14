@@ -18,6 +18,9 @@ struct RestaurantOpinionView: View {
                         opinionSection(title: "Dcard網友推薦", color: .blue, restaurant: restaurant, iconName: "DcardIcon", key: "Dcard")
                         opinionSection(title: "Instagram網友推薦", color: .pink, restaurant: restaurant, iconName: "InstagramIcon", key: "Instagram")
                         opinionSection(title: "部落格網友推薦", color: .green, restaurant: restaurant, iconName: "pencil.and.outline", key: "Blog")
+                        BannerAD(unitID: "ca-app-pub-7821111038136141/4884083714")
+                            .frame(height: 80)
+                            .clipShape(RoundedRectangle(cornerRadius: 15))
                     }
                     .padding()
                     

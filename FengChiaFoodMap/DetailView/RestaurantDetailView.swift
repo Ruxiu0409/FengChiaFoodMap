@@ -117,13 +117,6 @@ struct RestaurantDetailView: View {
                         .padding(.horizontal)
                     }
                     
-                    
-                    Spacer()
-                        .frame(height: 5)
-                    
-                    BannerAD(unitID: "ca-app-pub-7821111038136141/4884083714")
-                        .frame(height: 80)
-                    
                     Spacer()
                         .frame(height: 10)
                 }
@@ -209,5 +202,5 @@ struct RestaurantDetailView: View {
 
 
 #Preview{
-    RestaurantListView()
+    RestaurantListView(searchText: .constant(""))
 }

@@ -37,50 +37,57 @@ struct RestaurantMapView: View {
     }
     
     var body: some View {
-        ZStack {
-            Map(position: $cameraPosition, selection: $selectedRestaurantId) {
-                ForEach(filteredRestaurants) { restaurant in
-                    Annotation("", coordinate: restaurant.coordinate, anchor: .top) {
-                        RestaurantAnnotationView(restaurant: restaurant, isSelected: selectedRestaurantId == restaurant.id)
-                            .onTapGesture {
-                                selectRestaurant(restaurant)
-                            }
-                    }
-                    .tag(restaurant.id)
-                }
-            }
-            .mapStyle(.standard(elevation: .flat, emphasis: .automatic, pointsOfInterest: .excludingAll, showsTraffic: false))
-            .ignoresSafeArea()
-            .onTapGesture { _ in
-                withAnimation {
-                    selectedRestaurant = nil
-                    isCardVisible = false
-                    selectedRestaurantId = nil
-                }
-            }
-            .onChange(of: selectedRestaurantId) { _, newValue in
-                if let id = newValue,
-                   let restaurant = filteredRestaurants.first(where: { $0.id == id }) {
-                    selectRestaurant(restaurant)
-                }
-            }
-            
+        NavigationStack{
             VStack {
-                CategoryFilterView(categories: categories, selectedCategory: $selectedCategory)
-                Spacer()
-                if isCardVisible, let restaurant = selectedRestaurant {
-                    RestaurantCardView(restaurant: restaurant)
+                ZStack{
+                    Map(position: $cameraPosition, selection: $selectedRestaurantId) {
+                        ForEach(filteredRestaurants) { restaurant in
+                            Annotation("", coordinate: restaurant.coordinate, anchor: .top) {
+                                RestaurantAnnotationView(restaurant: restaurant, isSelected: selectedRestaurantId == restaurant.id)
+                                    .onTapGesture {
+                                        selectRestaurant(restaurant)
+                                    }
+                            }
+                            .tag(restaurant.id)
+                        }
+                    }
+                    .mapStyle(.standard(elevation: .flat, emphasis: .automatic, pointsOfInterest: .excludingAll, showsTraffic: false))
+                    .onTapGesture { _ in
+                        withAnimation {
+                            selectedRestaurant = nil
+                            isCardVisible = false
+                            selectedRestaurantId = nil
+                        }
+                    }
+                    .onChange(of: selectedRestaurantId) { _, newValue in
+                        if let id = newValue,
+                           let restaurant = filteredRestaurants.first(where: { $0.id == id }) {
+                            selectRestaurant(restaurant)
+                        }
+                    }
+                    VStack{
+                        CategoryFilterView(categories: categories, selectedCategory: $selectedCategory)
+                        Spacer()
+                    }
+                }
+                .overlay {
+                    VStack{
+                        if isCardVisible, let restaurant = selectedRestaurant {
+                            Spacer()
+                            RestaurantCardView(restaurant: restaurant)
+                        }
+                    }
                 }
             }
+            .onChange(of: selectedCategory) {
+                resetSelection()
+            }
+            .onAppear {
+                viewModel.fetchRestaurants()
+                resetSelection()
+            }
         }
-        .navigationBarTitleDisplayMode(.inline)
-        .onChange(of: selectedCategory) {
-            resetSelection()
-        }
-        .onAppear {
-            viewModel.fetchRestaurants()
-            resetSelection()
-        }
+        
     }
     
     private func resetSelection() {
@@ -117,23 +124,7 @@ struct RestaurantMapView: View {
 }
 
 
-struct CategoryButton: View {
-    let text: String
-    let isSelected: Bool
-    let action: () -> Void
-    
-    var body: some View {
-        Button(action: action) {
-            Text("#\(text)")
-                .padding(.horizontal, 16)
-                .padding(.vertical, 8)
-                .background(isSelected ? Color.blue : Color.white)
-                .foregroundColor(isSelected ? .white : .blue)
-                .cornerRadius(20)
-        }
-        .buttonStyle(PlainButtonStyle())
-    }
-}
+
 
 
 #Preview{
