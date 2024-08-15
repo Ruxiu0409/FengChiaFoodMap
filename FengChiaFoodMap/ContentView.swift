@@ -23,11 +23,16 @@ struct ContentView: View {
                         hideKeyboard()
                     }
                     .ignoresSafeArea()
-                Group {
-                    if isMapView {
-                        RestaurantMapView()
-                    } else {
-                        RestaurantListView(searchText: $searchText)
+                
+                VStack{
+                    SearchBar(text: $searchText)
+                        .frame(maxWidth: .infinity)
+                    Group {
+                        if isMapView {
+                            RestaurantMapView()
+                        } else {
+                            RestaurantListView(searchText: $searchText)
+                        }
                     }
                 }
             }
@@ -37,38 +42,24 @@ struct ContentView: View {
                 }
             }
             .toolbarBackground(.white)
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .principal) {
-                    VStack(alignment: .center,spacing: 10) {
-                        HStack {
-                            Button {
-                                showSettings = true
-                            } label: {
-                                Image(systemName: "line.3.horizontal")
-                                    .foregroundColor(.primary)
-                                    .frame(width: 20, height: 20)
-                            }
-                            Spacer()
-
-                            Text("逢甲美食地圖")
-                                .font(.headline)
-                                .foregroundColor(.primary)
-
-                            Spacer()
-
-                            Button {
-                                isMapView.toggle()
-                            } label: {
-                                Image(systemName: isMapView ? "list.bullet.rectangle.portrait" : "map")
-                                    .foregroundColor(.primary)
-                                    .frame(width: 20, height: 20)
-                            }
-                        }
-                        .padding(.top,40)
-
-                        SearchBar(text: $searchText)
-                            .padding()
-                        //    .frame(maxWidth: .infinity)
+                ToolbarItem(placement: .topBarLeading) {
+                    Button {
+                        showSettings = true
+                    } label: {
+                        Image(systemName: "line.3.horizontal")
+                            .foregroundColor(.primary)
+                            .frame(width: 20, height: 20)
+                    }
+                }
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        isMapView.toggle()
+                    } label: {
+                        Image(systemName: isMapView ? "list.bullet.rectangle.portrait" : "map")
+                            .foregroundColor(.primary)
+                            .frame(width: 20, height: 20)
                     }
                 }
             }
