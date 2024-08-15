@@ -22,7 +22,7 @@ struct SearchBar: View {
                         Image(systemName: "magnifyingglass")
                             .foregroundColor(.gray)
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                            .padding(.leading, 8)
+                            .padding(.leading, 10)
                         
                         if !text.isEmpty {
                             Button(action: {
@@ -30,6 +30,7 @@ struct SearchBar: View {
                             }) {
                                 Image(systemName: "multiply.circle.fill")
                                     .foregroundColor(.gray)
+                                    .padding(.trailing, 10)
                             }
                         }
                     }

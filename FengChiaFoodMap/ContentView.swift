@@ -45,21 +45,24 @@ struct ContentView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
-                    Button {
-                        showSettings = true
-                    } label: {
-                        Image(systemName: "line.3.horizontal")
-                            .foregroundColor(.primary)
-                            .frame(width: 20, height: 20)
-                    }
+                    Text("逢甲美食地圖")
                 }
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        isMapView.toggle()
-                    } label: {
-                        Image(systemName: isMapView ? "list.bullet.rectangle.portrait" : "map")
-                            .foregroundColor(.primary)
-                            .frame(width: 20, height: 20)
+                    HStack{
+                        Button {
+                            isMapView.toggle()
+                        } label: {
+                            Image(systemName: isMapView ? "list.bullet.rectangle.portrait" : "map")
+                                .foregroundColor(.primary)
+                                .frame(width: 20, height: 20)
+                        }
+                        Button {
+                            showSettings = true
+                        } label: {
+                            Image(systemName: "gearshape")
+                                .foregroundColor(.primary)
+                                .frame(width: 20, height: 20)
+                        }
                     }
                 }
             }
