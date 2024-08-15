@@ -12,8 +12,8 @@ struct SearchBar: View {
     
     var body: some View {
         HStack {
-            TextField("搜尋餐廳或類別", text: $text)
-                .padding(10)
+            TextField("搜尋餐廳或類別...", text: $text)
+                .padding(8)
                 .padding(.horizontal, 30)
                 .background(Color(.systemGray6))
                 .cornerRadius(100)
@@ -31,13 +31,11 @@ struct SearchBar: View {
                                 Image(systemName: "multiply.circle.fill")
                                     .foregroundColor(.gray)
                             }
-                            //.contentShape(Rectangle()) // 擴大點擊區域
-                            //.padding(10) // 增加額外的點擊範圍
                         }
                     }
                 )
         }
-        //.padding(.horizontal, 10) // 擴大整個搜索框的點擊區域
+        .padding(.horizontal, 10)
     }
 }
 
