@@ -46,6 +46,7 @@ struct ContentView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Text("逢甲美食地圖")
+                        .font(.system(size: 20))
                 }
                 ToolbarItem(placement: .topBarTrailing) {
                     HStack{
