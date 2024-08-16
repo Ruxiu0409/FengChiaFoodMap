@@ -41,7 +41,7 @@ struct ContentView: View {
                     SettingView()
                 }
             }
-            .toolbarBackground(.white)
+            .toolbarBackground(.automatic)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
