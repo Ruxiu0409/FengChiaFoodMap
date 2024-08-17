@@ -8,6 +8,7 @@ struct RestaurantManagementView: View {
     @State private var showingErrorAlert = false
     @State private var showSetting = false
     @Binding var showManageView: Bool
+    @Environment(\.colorScheme) var scheme
     
     var body: some View {
         NavigationView {
@@ -44,7 +45,7 @@ struct RestaurantManagementView: View {
             }
             .sheet(isPresented: $showSetting) {
                 NavigationStack {
-                    SettingView(viewModel: viewModel.authViewModel)
+                    SettingView(viewModel: viewModel.authViewModel, scheme: scheme)
                 }
             }
             .sheet(isPresented: $showingAddForm) {
