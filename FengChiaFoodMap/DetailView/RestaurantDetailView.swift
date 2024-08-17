@@ -13,6 +13,7 @@ struct RestaurantDetailView: View {
     @State private var currentPage: Int = 0
     @State private var showingMapOptions = false
     @Environment(\.dismiss) var dismiss
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         NavigationStack {
@@ -55,9 +56,9 @@ struct RestaurantDetailView: View {
                         } label: {
                             HStack {
                                 Text(restaurantOpeningHoursButton ? "顯示較少" : "查看更多")
-                                    .foregroundStyle(.black)
+                                    .foregroundStyle(colorScheme == .light ? .black : .white)
                                 Image(systemName: "control")
-                                    .foregroundStyle(.black)
+                                    .foregroundStyle(colorScheme == .light ? .black : .white)
                                     .rotationEffect(.degrees(restaurantOpeningHoursButton ? 0 : 180))
                             }
                             .font(.system(size: 12))
@@ -121,7 +122,7 @@ struct RestaurantDetailView: View {
                             }
                             Spacer()
                         }
-                        .tint(.black)
+                        .tint(colorScheme == .light ? .black : .white)
                     }
                     else{
                         HStack{
@@ -144,10 +145,10 @@ struct RestaurantDetailView: View {
                     } label: {
                         VStack {
                             Text("評價")
-                                .foregroundStyle(currentPage == 0 ? .black : .gray)
+                                .foregroundStyle(currentPage == 0 ? colorScheme == .light ? .black : .white : .gray)
                             Rectangle()
                                 .frame(height: 4)
-                                .foregroundStyle(currentPage == 0 ? .black : .clear)
+                                .foregroundStyle(currentPage == 0 ? colorScheme == .light ? .black : .white : .clear)
                         }
                     }
                     
@@ -158,10 +159,10 @@ struct RestaurantDetailView: View {
                     } label: {
                         VStack {
                             Text("菜單")
-                                .foregroundStyle(currentPage == 1 ? .black : .gray)
+                                .foregroundStyle(currentPage == 1 ? colorScheme == .light ? .black : .white : .gray)
                             Rectangle()
                                 .frame(height: 4)
-                                .foregroundStyle(currentPage == 1 ? .black : .clear)
+                                .foregroundStyle(currentPage == 1 ? colorScheme == .light ? .black : .white : .clear)
                         }
                     }
                 }
