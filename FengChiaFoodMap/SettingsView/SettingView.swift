@@ -5,7 +5,7 @@ struct SettingView: View {
     @ObservedObject var viewModel = AuthViewModel()
     @Environment(\.presentationMode) var presentationMode
     @AppStorage("userTheme") var userTheme : Theme = .systemDefault
-    var scheme : ColorScheme
+    @Environment(\.colorScheme) var systemColorScheme
     
     var body: some View {
         List {
@@ -61,7 +61,7 @@ struct SettingView: View {
                 }
             }
         }
-        .environment(\.colorScheme, scheme)
+        .environment(\.colorScheme, systemColorScheme)
     }
 }
 
@@ -77,7 +77,7 @@ enum Theme : String, CaseIterable {
     case light = "Light"
     case dark = "Dark"
     
-    var colorScheme : ColorScheme? {
+    func colorScheme(for systemColorScheme: ColorScheme) -> ColorScheme? {
         switch self {
         case .systemDefault:
             return nil
@@ -86,5 +86,11 @@ enum Theme : String, CaseIterable {
         case .dark:
             return .dark
         }
+    }
+}
+
+#Preview {
+    NavigationStack {
+        SettingView()
     }
 }
