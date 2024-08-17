@@ -69,7 +69,6 @@
 		F7287B3F2C6B686C00D7074D /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = F7287B3E2C6B686C00D7074D /* GoogleMobileAds */; };
 		F7287B412C6B6AA600D7074D /* GoogleMobileAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7287B402C6B6AA600D7074D /* GoogleMobileAds.swift */; };
 		F766BE7C2C707A1D00A04703 /* StatementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F766BE7B2C707A1D00A04703 /* StatementView.swift */; };
-		F7A6653A2C711217005FC70E /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A665392C711217005FC70E /* Theme.swift */; };
 		F7A930852C6CAFC100759938 /* HideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A930842C6CAFC100759938 /* HideKeyboard.swift */; };
 /* End PBXBuildFile section */
 
@@ -115,7 +114,6 @@
 		F7287B3B2C6B4EF700D7074D /* Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Update.swift; sourceTree = "<group>"; };
 		F7287B402C6B6AA600D7074D /* GoogleMobileAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMobileAds.swift; sourceTree = "<group>"; };
 		F766BE7B2C707A1D00A04703 /* StatementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementView.swift; sourceTree = "<group>"; };
-		F7A665392C711217005FC70E /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		F7A930842C6CAFC100759938 /* HideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -221,7 +219,6 @@
 				F7287AE22C676C0400D7074D /* Restaurant.swift */,
 				F7287B3B2C6B4EF700D7074D /* Update.swift */,
 				F7287B0E2C6B2E8200D7074D /* AlertItem.swift */,
-				F7A665392C711217005FC70E /* Theme.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -410,7 +407,6 @@
 				F7287B0D2C6B2E1100D7074D /* SubmissionView.swift in Sources */,
 				F7287B1A2C6B2F9600D7074D /* RestaurantOpinionView.swift in Sources */,
 				F7A930852C6CAFC100759938 /* HideKeyboard.swift in Sources */,
-				F7A6653A2C711217005FC70E /* Theme.swift in Sources */,
 				F7287B3A2C6B4E8300D7074D /* UpdateContentView.swift in Sources */,
 				F7287B0A2C6B2D3F00D7074D /* RestaurantListViewModel.swift in Sources */,
 				F766BE7C2C707A1D00A04703 /* StatementView.swift in Sources */,
@@ -580,10 +576,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -620,10 +615,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

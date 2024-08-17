@@ -17,6 +17,15 @@ struct SettingView: View {
                 Text("使用者資料")
             }
             
+            Section{
+                Picker(selection: $userTheme, label: Label("背景顏色模式", systemImage: "sun.max")) {
+                    Text("依據系統設定").tag(Theme.systemDefault)
+                    Text("淺色模式").tag(Theme.light)
+                    Text("深色模式").tag(Theme.dark)
+                }
+            } header: {
+                Text("個人化設定")
+            }
             
             Section{
                 NavigationLink(destination: UpdateContentView()) {
@@ -27,19 +36,10 @@ struct SettingView: View {
                 } label: {
                     Label("資料聲明", systemImage: "doc.text")
                 }
-
             } header: {
                 Text("應用程式資訊")
             }
-            Section{
-                Picker(selection: $userTheme, label: Text("背景顏色模式")) {
-                    Text("依據系統設定").tag(Theme.systemDefault)
-                    Text("淺色模式").tag(Theme.light)
-                    Text("深色模式").tag(Theme.dark)
-                }
-            } header: {
-                Text("應用程式設定")
-            }
+            
             Section {
                 NavigationLink(destination: SubmissionView()) {
                     Label("與我們聯繫", systemImage: "square.and.pencil")
@@ -53,14 +53,13 @@ struct SettingView: View {
 
         }
         .listStyle(SidebarListStyle())
-        .navigationTitle("設置")
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button("完成") {
-                    presentationMode.wrappedValue.dismiss()
-                }
-            }
-        }
+//        .toolbar {
+//            ToolbarItem(placement: .navigationBarTrailing) {
+//                Button("完成") {
+//                    presentationMode.wrappedValue.dismiss()
+//                }
+//            }
+//        }
         .environment(\.colorScheme, systemColorScheme)
     }
 }
