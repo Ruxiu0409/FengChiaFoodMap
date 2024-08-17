@@ -13,6 +13,7 @@ struct ContentView: View {
     @State private var isMapView: Bool = true
     @State private var searchText = ""
     @State private var showSettings = false
+    @State private var tabBarSelected = 0
 
     var body: some View {
         NavigationStack {
@@ -24,21 +25,32 @@ struct ContentView: View {
                     }
                     .ignoresSafeArea()
                 
-                VStack{
-                    SearchBar(text: $searchText)
-                        .frame(maxWidth: .infinity)
-                    Group {
-                        if isMapView {
-                            RestaurantMapView()
-                        } else {
-                            RestaurantListView(searchText: $searchText)
+                TabView(selection: $tabBarSelected){
+                    
+                    VStack{
+                        SearchBar(text: $searchText)
+                            .frame(maxWidth: .infinity)
+                        Group {
+                            if isMapView {
+                                RestaurantMapView()
+                            } else {
+                                RestaurantListView(searchText: $searchText)
+                            }
                         }
                     }
-                }
-            }
-            .sheet(isPresented: $showSettings) {
-                NavigationStack {
+                    .tag(0)
+                    .tabItem {
+                        Image(systemName: "map")
+                        Text("地圖")
+                    }
+                    
+                    
                     SettingView()
+                        .tag(1)
+                        .tabItem {
+                            Image(systemName: "gearshape")
+                            Text("設定")
+                        }
                 }
             }
             .toolbarBackground(.automatic)
@@ -46,7 +58,7 @@ struct ContentView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Text("逢甲美食地圖")
-                        .font(.system(size: 20))
+                        .font(.custom("HiraginoSans-W7", size: 24))
                 }
                 ToolbarItem(placement: .topBarTrailing) {
                     HStack{
@@ -57,16 +69,11 @@ struct ContentView: View {
                                 .foregroundColor(.primary)
                                 .frame(width: 20, height: 20)
                         }
-                        Button {
-                            showSettings = true
-                        } label: {
-                            Image(systemName: "gearshape")
-                                .foregroundColor(.primary)
-                                .frame(width: 20, height: 20)
-                        }
                     }
                 }
             }
+            
+            
         }
     }
 }
