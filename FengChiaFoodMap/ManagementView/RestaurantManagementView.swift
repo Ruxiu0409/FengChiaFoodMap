@@ -45,7 +45,7 @@ struct RestaurantManagementView: View {
             }
             .sheet(isPresented: $showSetting) {
                 NavigationStack {
-                    SettingView(viewModel: viewModel.authViewModel, scheme: scheme)
+                    SettingView(viewModel: viewModel.authViewModel)
                 }
             }
             .sheet(isPresented: $showingAddForm) {

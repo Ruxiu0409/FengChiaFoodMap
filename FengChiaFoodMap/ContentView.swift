@@ -15,7 +15,7 @@ struct ContentView: View {
     @State private var showSettings = false
     @State private var tabBarSelected = 0
     @AppStorage("userTheme") var userTheme : Theme = .systemDefault
-    @Environment(\.colorScheme) var scheme
+    @Environment(\.colorScheme) var systemColorScheme
 
     var body: some View {
         NavigationStack {
@@ -47,7 +47,7 @@ struct ContentView: View {
                     }
                     
                     
-                    SettingView(scheme: scheme)
+                    SettingView()
                         .tag(1)
                         .tabItem {
                             Image(systemName: "gearshape")
@@ -74,7 +74,7 @@ struct ContentView: View {
                     }
                 }
             }
-            .preferredColorScheme(userTheme.colorScheme)
+            .preferredColorScheme(userTheme.colorScheme(for: systemColorScheme))
         }
     }
 }
