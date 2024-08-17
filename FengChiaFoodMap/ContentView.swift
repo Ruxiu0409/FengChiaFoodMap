@@ -14,7 +14,7 @@ struct ContentView: View {
     @State private var searchText = ""
     @State private var showSettings = false
     @State private var tabBarSelected = 0
-    @AppStorage("userTheme") var userTheme : Theme = .systemDefault
+    @AppStorage("userTheme") var userTheme:Theme = .systemDefault
     @Environment(\.colorScheme) var systemColorScheme
 
     var body: some View {
@@ -75,6 +75,23 @@ struct ContentView: View {
                 }
             }
             .preferredColorScheme(userTheme.colorScheme(for: systemColorScheme))
+        }
+    }
+}
+
+enum Theme: String, CaseIterable {
+    case systemDefault = "Default"
+    case light = "Light"
+    case dark = "Dark"
+    
+    func colorScheme(for systemColorScheme: ColorScheme) -> ColorScheme? {
+        switch self {
+        case .systemDefault:
+            return nil
+        case .light:
+            return .light
+        case .dark:
+            return .dark
         }
     }
 }

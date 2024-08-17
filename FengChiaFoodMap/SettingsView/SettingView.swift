@@ -72,22 +72,6 @@ struct DeveloperInfoView: View {
     }
 }
 
-enum Theme : String, CaseIterable {
-    case systemDefault = "Default"
-    case light = "Light"
-    case dark = "Dark"
-    
-    func colorScheme(for systemColorScheme: ColorScheme) -> ColorScheme? {
-        switch self {
-        case .systemDefault:
-            return nil
-        case .light:
-            return .light
-        case .dark:
-            return .dark
-        }
-    }
-}
 
 #Preview {
     NavigationStack {
