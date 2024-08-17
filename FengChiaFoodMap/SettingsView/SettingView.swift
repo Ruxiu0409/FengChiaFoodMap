@@ -14,13 +14,23 @@ struct SettingView: View {
             }header: {
                 Text("使用者資料")
             }
+            
+            
             Section{
                 NavigationLink(destination: UpdateContentView()) {
                     Label("更新內容", systemImage: "arrow.triangle.2.circlepath")
                 }
+                NavigationLink {
+                    StatementView()
+                } label: {
+                    Label("資料聲明", systemImage: "doc.text")
+                }
+
             } header: {
                 Text("應用程式資訊")
             }
+            
+            
             Section {
                 NavigationLink(destination: SubmissionView()) {
                     Label("與我們聯繫", systemImage: "square.and.pencil")
@@ -52,5 +62,11 @@ struct DeveloperInfoView: View {
     var body: some View {
         Text("開發人員介紹功能尚未實現")
             .navigationTitle("開發人員介紹")
+    }
+}
+
+#Preview{
+    NavigationStack{
+        SettingView()
     }
 }
