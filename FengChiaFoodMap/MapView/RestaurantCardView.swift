@@ -9,38 +9,66 @@ import SwiftUI
 
 struct RestaurantCardView: View {
     let restaurant: Restaurant
+    @State private var heights = HeightRecord()
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Text(restaurant.name)
-                .font(.title2)
-                .fontWeight(.bold)
-            Text(categoryText())
-                .font(.subheadline)
-                .foregroundColor(.secondary)
-            Text(restaurant.address)
-                .font(.subheadline)
-            HStack {
-                Text(openingHoursText()) // 這裡只顯示今天的營業時間
-                Spacer()
-                Text("電話: \(restaurant.phoneNumber)")
+        GeometryReader { _ in
+            VStack(alignment: .leading, spacing: 0) {
+                // Header
+                HStack {
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(restaurant.name)
+                            .font(.title2)
+                            .fontWeight(.bold)
+                        Text(categoryText())
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                    }
+                    Spacer()
+                    Image(systemName: "fork.knife.circle.fill")
+                        .foregroundColor(.blue)
+                        .font(.system(size: 30))
+                }
+                .padding()
+                .background(Color(.systemBackground))
+                .recordHeight(of: \.header)
+                
+                // Divider
+                Rectangle()
+                    .fill(Color.gray.opacity(0.2))
+                    .frame(height: 1)
+                
+                // Body
+                VStack(alignment: .leading, spacing: 12) {
+                    infoRow(icon: "mappin.circle.fill", text: restaurant.address)
+                    infoRow(icon: "clock.fill", text: openingHoursText())
+                    infoRow(icon: "phone.fill", text: "電話: \(restaurant.phoneNumber)")
+                }
+                .padding()
+                .background(Color(.systemBackground))
             }
-            .font(.caption)
-            
-            NavigationLink(destination: RestaurantDetailView(restaurant: restaurant)) {
-                Text("查看店家資料")
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-            }
+            .cornerRadius(15)
+            .padding()
+            .recordHeight(of: \.all)
         }
-        .padding()
-        .background(Color(.systemBackground))
-        .cornerRadius(15)
-        .shadow(radius: 5)
-        .padding()
+        .onPreferenceChange(HeightRecord.self) {
+            heights = $0
+        }
+        .presentationDetents([
+            .height(heights.header ?? 10),
+            .height(heights.all ?? 10)
+        ])
+        .interactiveDismissDisabled(true)
+    }
+    
+    private func infoRow(icon: String, text: String) -> some View {
+        HStack(spacing: 10) {
+            Image(systemName: icon)
+                .foregroundColor(.blue)
+            Text(text)
+                .font(.subheadline)
+        }
     }
     
     // 返回今天的營業時間
@@ -72,4 +100,36 @@ struct RestaurantCardView: View {
     }
 }
 
+struct HeightRecord: Equatable {
+    var header: CGFloat? = nil
+    var all: CGFloat? = nil
+}
 
+extension HeightRecord: PreferenceKey {
+    static var defaultValue = Self()
+    static func reduce(value: inout Self, nextValue: () -> Self) {
+        value.header = nextValue().header ?? value.header
+        value.all = nextValue().all ?? value.all
+    }
+}
+
+extension View {
+    func recordHeight(of keyPath: WritableKeyPath<HeightRecord, CGFloat?>) -> some View {
+        return self.background {
+            GeometryReader { g in
+                var record = HeightRecord()
+                let _ = record[keyPath: keyPath] = g.size.height
+                Color.clear
+                    .preference(
+                        key: HeightRecord.self,
+                        value: record)
+            }
+        }
+    }
+}
+
+
+
+#Preview {
+    RestaurantMapView()
+}

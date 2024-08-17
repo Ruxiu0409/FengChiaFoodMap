@@ -16,6 +16,9 @@ struct RestaurantMapView: View {
     @State private var selectedCategory: RestaurantCategory?
     @State private var selectedRestaurantId: String?
     @State private var searchText = ""
+    @State private var sheetHeaderSize: CGSize = .zero
+    @State private var sheetOverallSize: CGSize = .zero
+
     
     init() {
         let initialRegion = MKCoordinateRegion(
@@ -70,14 +73,6 @@ struct RestaurantMapView: View {
                         Spacer()
                     }
                 }
-                .overlay {
-                    VStack{
-                        if isCardVisible, let restaurant = selectedRestaurant {
-                            Spacer()
-                            RestaurantCardView(restaurant: restaurant)
-                        }
-                    }
-                }
             }
             .onChange(of: selectedCategory) {
                 resetSelection()
@@ -86,6 +81,10 @@ struct RestaurantMapView: View {
                 viewModel.fetchRestaurants()
                 resetSelection()
             }
+        }
+        .sheet(isPresented: $isCardVisible){
+            RestaurantCardView(restaurant: selectedRestaurant!)
+                .presentationBackgroundInteraction(.enabled)
         }
         
     }
@@ -122,10 +121,6 @@ struct RestaurantMapView: View {
         }
     }
 }
-
-
-
-
 
 #Preview{
     RestaurantMapView()
