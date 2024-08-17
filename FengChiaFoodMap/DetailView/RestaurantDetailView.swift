@@ -12,11 +12,26 @@ struct RestaurantDetailView: View {
     @State private var restaurantOpeningHoursButton: Bool = false
     @State private var currentPage: Int = 0
     @State private var showingMapOptions = false
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
                 VStack(spacing: 10) {
+                    HStack{
+                        Group{
+                            Image(systemName: "control")
+                                .rotationEffect(Angle(degrees: 270))
+                            Text("返回")
+                        }
+                        .onTapGesture{
+                            dismiss()
+                        }
+                        Spacer()
+                    }
+                    .foregroundStyle(.blue)
+                    .padding(.horizontal)
+                    
                     HStack {
                         Text(restaurant.name)
                             .font(.system(size: 24, weight: .medium))
@@ -130,7 +145,6 @@ struct RestaurantDetailView: View {
                         VStack {
                             Text("評價")
                                 .foregroundStyle(currentPage == 0 ? .black : .gray)
-                                //.font(.system(size: currentPage == 0 ? 16 : 12))
                             Rectangle()
                                 .frame(height: 4)
                                 .foregroundStyle(currentPage == 0 ? .black : .clear)
@@ -145,7 +159,6 @@ struct RestaurantDetailView: View {
                         VStack {
                             Text("菜單")
                                 .foregroundStyle(currentPage == 1 ? .black : .gray)
-                                //.font(.system(size: currentPage == 1 ? 16 : 12))
                             Rectangle()
                                 .frame(height: 4)
                                 .foregroundStyle(currentPage == 1 ? .black : .clear)
@@ -164,7 +177,7 @@ struct RestaurantDetailView: View {
                 .animation(.easeInOut, value: currentPage)
                 .navigationBarTitleDisplayMode(.inline)
             }
-            
+            .navigationBarBackButtonHidden(true)
         }
         .confirmationDialog("選擇開啟的地圖", isPresented: $showingMapOptions, titleVisibility: .visible) {
             Button("在地圖中顯示"){

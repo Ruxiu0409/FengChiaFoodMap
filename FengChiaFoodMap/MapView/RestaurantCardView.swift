@@ -10,6 +10,10 @@ import SwiftUI
 struct RestaurantCardView: View {
     let restaurant: Restaurant
     @State private var heights = HeightRecord()
+    @State private var showingMapOptions = false
+    @State private var currentPage = 0
+    @State private var showDetailView = false
+    @State private var selectedDetent = PresentationDetent.height(200)
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
@@ -26,9 +30,16 @@ struct RestaurantCardView: View {
                             .foregroundColor(.secondary)
                     }
                     Spacer()
-                    Image(systemName: "fork.knife.circle.fill")
-                        .foregroundColor(.blue)
-                        .font(.system(size: 30))
+                    HStack{
+                        Image(systemName: "fork.knife.circle.fill")
+                            .font(.system(size: 30))
+                        Image(systemName: "control")
+                            .rotationEffect(Angle(degrees: 90))
+                    }
+                    .foregroundColor(.blue)
+                    .onTapGesture {
+                        showDetailView = true
+                    }
                 }
                 .padding()
                 .background(Color(.systemBackground))
@@ -42,11 +53,29 @@ struct RestaurantCardView: View {
                 // Body
                 VStack(alignment: .leading, spacing: 12) {
                     infoRow(icon: "mappin.circle.fill", text: restaurant.address)
+                        .onTapGesture {
+                            showingMapOptions = true
+                        }
                     infoRow(icon: "clock.fill", text: openingHoursText())
                     infoRow(icon: "phone.fill", text: "電話: \(restaurant.phoneNumber)")
+                        .onTapGesture {
+                            if let url = URL(string: "tel://\(restaurant.phoneNumber)"),
+                               UIApplication.shared.canOpenURL(url) {
+                                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                            }
+                        }
+                    
                 }
                 .padding()
                 .background(Color(.systemBackground))
+                .confirmationDialog("選擇開啟的地圖", isPresented: $showingMapOptions, titleVisibility: .visible) {
+                    Button("在地圖中顯示"){
+                        UIApplication.shared.open(restaurant.appleMapsLink!)
+                    }
+                    Button("在Google地圖中顯示"){
+                        UIApplication.shared.open(restaurant.googleMapsLink!)
+                    }
+                }
             }
             .cornerRadius(15)
             .padding()
@@ -56,10 +85,15 @@ struct RestaurantCardView: View {
             heights = $0
         }
         .presentationDetents([
-            .height(heights.header ?? 10),
-            .height(heights.all ?? 10)
-        ])
+            .height(200),
+            .height(heights.header ?? 10)
+        ],selection: $selectedDetent
+        )
         .interactiveDismissDisabled(true)
+        .fullScreenCover(isPresented: $showDetailView){
+            RestaurantDetailView(restaurant: restaurant)
+        }
+        
     }
     
     private func infoRow(icon: String, text: String) -> some View {
@@ -97,6 +131,12 @@ struct RestaurantCardView: View {
         let formatter = DateFormatter()
         formatter.timeStyle = .short
         return formatter.string(from: date)
+    }
+    
+    private func formatTimeRange(openTime: Date, closeTime: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm"
+        return "\(formatter.string(from: openTime)) - \(formatter.string(from: closeTime))"
     }
 }
 
