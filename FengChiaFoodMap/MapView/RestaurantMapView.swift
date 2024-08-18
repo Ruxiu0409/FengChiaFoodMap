@@ -18,7 +18,8 @@ struct RestaurantMapView: View {
     @State private var searchText = ""
     @State private var sheetHeaderSize: CGSize = .zero
     @State private var sheetOverallSize: CGSize = .zero
-
+    @State private var zoomLevel: Double = 15
+    
     
     init() {
         let initialRegion = MKCoordinateRegion(
@@ -45,8 +46,8 @@ struct RestaurantMapView: View {
                 ZStack{
                     Map(position: $cameraPosition, selection: $selectedRestaurantId) {
                         ForEach(filteredRestaurants) { restaurant in
-                            Annotation("", coordinate: restaurant.coordinate, anchor: .top) {
-                                RestaurantAnnotationView(restaurant: restaurant, isSelected: selectedRestaurantId == restaurant.id)
+                            Annotation("", coordinate: restaurant.coordinate, anchor: .center) {
+                                RestaurantAnnotationView(restaurant: restaurant, isSelected: selectedRestaurantId == restaurant.id, zoomLevel: zoomLevel)
                                     .onTapGesture {
                                         selectRestaurant(restaurant)
                                     }
@@ -55,6 +56,9 @@ struct RestaurantMapView: View {
                         }
                     }
                     .mapStyle(.standard(elevation: .flat, emphasis: .automatic, pointsOfInterest: .excludingAll, showsTraffic: false))
+                    .onMapCameraChange { context in
+                        zoomLevel = context.region.span.latitudeDelta.zoomLevel
+                    }
                     .onTapGesture { _ in
                         withAnimation {
                             selectedRestaurant = nil
@@ -119,6 +123,12 @@ struct RestaurantMapView: View {
                 span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
             ))
         }
+    }
+}
+
+extension CLLocationDegrees {
+    var zoomLevel: Double {
+        return log2(360 / self) + 1
     }
 }
 
