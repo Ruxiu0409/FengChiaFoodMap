@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RestaurantDisplayRowView: View {
     var restaurant: Restaurant
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         
@@ -47,7 +48,7 @@ struct RestaurantDisplayRowView: View {
             .padding([.leading, .trailing, .bottom], 16)
         }
         .padding()
-        .background(Color(.systemBackground))
+        .background(Color(colorScheme == .light ? .white : .systemGray6))
         .clipShape(RoundedRectangle(cornerRadius: 20))
         .shadow(color: .gray.opacity(0.2), radius: 10, x: 0, y: 5)
         
