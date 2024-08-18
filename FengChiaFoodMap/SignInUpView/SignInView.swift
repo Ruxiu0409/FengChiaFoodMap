@@ -30,7 +30,7 @@ struct SignInView: View {
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity)
                     .padding()
-                    .background(Color.blue)
+                    .background(Color.accent)
                     .cornerRadius(10)
             }
             .padding(.horizontal)
@@ -42,10 +42,10 @@ struct SignInView: View {
                 NavigationLink(destination: SignUpView(viewModel: viewModel)) {
                     Text("註冊")
                         .fontWeight(.bold)
-                        .foregroundColor(Color.blue)
+                        .foregroundColor(Color.accent)
                 }
             }
-            .background(Color.white)
+            .background(colorScheme == .light ? .white : .black)
             HStack{
                 NavigationLink(destination: WebView(url: URL(string: "https://fengchiafoodmap.webnode.tw/privacy-policies/")!)) {
                     Text("隱私權政策")
