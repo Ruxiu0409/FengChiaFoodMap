@@ -39,8 +39,8 @@ struct CategoryButton: View {
             Text("# \(text)")
                 .padding(.horizontal, 16)
                 .padding(.vertical, 8)
-                .background(isSelected ? Color.blue : Color.white)
-                .foregroundColor(isSelected ? .white : .blue)
+                .background(isSelected ? .accent : .white)
+                .foregroundColor(isSelected ? .white : .accent)
                 .cornerRadius(20)
         }
         .buttonStyle(PlainButtonStyle())

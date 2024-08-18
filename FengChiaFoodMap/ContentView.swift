@@ -68,7 +68,6 @@ struct ContentView: View {
                             isMapView.toggle()
                         } label: {
                             Image(systemName: isMapView ? "list.bullet.rectangle.portrait" : "map")
-                                .foregroundColor(.primary)
                                 .frame(width: 20, height: 20)
                         }
                     }
@@ -76,6 +75,7 @@ struct ContentView: View {
             }
             .preferredColorScheme(userTheme.colorScheme)
         }
+        .tint(.accent)
     }
 }
 

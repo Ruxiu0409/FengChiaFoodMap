@@ -19,6 +19,7 @@ struct FengChiaFoodMapApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .tint(.accent)
         }
     }
 }

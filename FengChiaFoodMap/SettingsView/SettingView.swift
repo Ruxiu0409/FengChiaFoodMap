@@ -12,10 +12,12 @@ struct SettingView: View {
             Section{
                 NavigationLink(destination: ProfileView(viewModel: viewModel)) {
                     Label("個人資料", systemImage: "person.circle")
+                        .tint(.yellow)
                 }
             }header: {
                 Text("使用者資料")
             }
+            
             
             Section{
                 Picker(selection: $userTheme, label: Label("背景顏色模式", systemImage: "sun.max")) {
