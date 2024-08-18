@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RestaurantOpinionView: View {
     var restaurant: Restaurant
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         NavigationStack{
@@ -94,7 +95,7 @@ struct RestaurantOpinionView: View {
                     }
                 }
                 .padding()
-                .background(Color(.systemBackground))
+                .background(Color(colorScheme == .light ? .white : .systemGray6))
                 .clipShape(RoundedRectangle(cornerRadius: 15))
                 .shadow(color: .black.opacity(0.05), radius: 5, x: 0, y: 3)
             }

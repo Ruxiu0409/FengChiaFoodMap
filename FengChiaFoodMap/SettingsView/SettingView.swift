@@ -5,7 +5,7 @@ struct SettingView: View {
     @ObservedObject var viewModel = AuthViewModel()
     @Environment(\.presentationMode) var presentationMode
     @AppStorage("userTheme") var userTheme : Theme = .systemDefault
-    @Environment(\.colorScheme) var systemColorScheme
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         List {
@@ -60,7 +60,7 @@ struct SettingView: View {
 //                }
 //            }
 //        }
-        .environment(\.colorScheme, systemColorScheme)
+        .environment(\.colorScheme, colorScheme)
     }
 }
 
