@@ -21,7 +21,7 @@ struct SettingView: View {
             
             Section{
                 Picker(selection: $userTheme, label: Label("背景顏色模式", systemImage: "sun.max")) {
-                    Text("依據系統設定").tag(Theme.systemDefault)
+                    Text("跟隨系統").tag(Theme.systemDefault)
                     Text("淺色模式").tag(Theme.light)
                     Text("深色模式").tag(Theme.dark)
                 }
