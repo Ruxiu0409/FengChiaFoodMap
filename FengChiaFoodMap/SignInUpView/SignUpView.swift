@@ -41,7 +41,7 @@ struct SignUpView: View {
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity)
                     .padding()
-                    .background(Color.green)
+                    .background(Color.accent)
                     .cornerRadius(10)
             }
             .padding(.horizontal)
@@ -55,7 +55,7 @@ struct SignUpView: View {
                         .foregroundStyle(.gray)
                 }
             }
-            .background(Color.white)
+            .background(colorScheme == .light ? Color.white : Color.black)
         }
         .alert(item: $alertItem) { alertItem in
             Alert(title: Text(alertItem.title),
