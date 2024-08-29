@@ -12,6 +12,7 @@ struct RestaurantDetailView: View {
     @State private var restaurantOpeningHoursButton: Bool = false
     @State private var currentPage: Int = 0
     @State private var showingMapOptions = false
+    @State private var collection = false
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme
     
@@ -37,6 +38,21 @@ struct RestaurantDetailView: View {
                         Text(restaurant.name)
                             .font(.system(size: 24, weight: .medium))
                         Spacer()
+                        Button {
+                            if collection {
+                                collection = false
+                            }else {
+                                collection = true
+                            }
+                        } label: {
+                            if collection == true {
+                                Image(systemName: "star.fill")
+                                    .imageScale(.large)
+                            }else {
+                                Image(systemName: "star")
+                                    .imageScale(.large)
+                            }
+                        }
                     }
                     .padding(.horizontal)
                     
